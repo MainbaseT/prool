@@ -274,7 +274,12 @@ export const anvil = defineInstance((parameters?: AnvilParameters) => {
     port: args.port ?? 8545,
     async start({ port = args.port }, options) {
       return await process.start(
-        ($) => $`${binary} ${toArgs({ ...args, port })}`,
+        ($) =>
+          $({
+            env: {
+              FOUNDRY_DISABLE_NIGHTLY_WARNING: 'true',
+            },
+          })`${binary} ${toArgs({ ...args, port })}`,
         {
           ...options,
           // Resolve when the process is listening via a "Listening on" message.
@@ -285,7 +290,7 @@ export const anvil = defineInstance((parameters?: AnvilParameters) => {
             })
             process.stderr.on('data', (data) => {
               const message = data.toString()
-              if (message.includes('Warning:')) return
+              if (message.includes('Warning')) return
               reject(message)
             })
           },

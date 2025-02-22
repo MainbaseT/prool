@@ -1,5 +1,35 @@
 # prool
 
+## 0.0.23
+
+### Patch Changes
+
+- [`af68957`](https://github.com/wevm/prool/commit/af68957fdae33421a55757aafbc7a29accea2479) Thanks [@jxom](https://github.com/jxom)! - Added `FOUNDRY_DISABLE_NIGHTLY_WARNING` env var to Anvil instance.
+
+## 0.0.22
+
+### Patch Changes
+
+- [`6354fcb`](https://github.com/wevm/prool/commit/6354fcbefddada249fb9a3abaaa7fe69bd04f1b2) Thanks [@jxom](https://github.com/jxom)! - Fixed Anvil warning.
+
+## 0.0.21
+
+### Patch Changes
+
+- [`7552ac7`](https://github.com/wevm/prool/commit/7552ac70a0182039b6f8dac3a704f2939ead5185) Thanks [@jxom](https://github.com/jxom)! - Reverted `SIGKILL` changes.
+
+## 0.0.20
+
+### Patch Changes
+
+- [`39cdcbd`](https://github.com/wevm/prool/commit/39cdcbd4286fa1bb3728a0c7679d12931d4d44bb) Thanks [@jxom](https://github.com/jxom)! - Added `/destroy` endpoint.
+
+## 0.0.19
+
+### Patch Changes
+
+- [`88946fe`](https://github.com/wevm/prool/commit/88946fe5cc611d2847ccb912a0ee41675d335e7b) Thanks [@jxom](https://github.com/jxom)! - Updated to kill process via `SIGKILL`.
+
 ## 0.0.18
 
 ### Patch Changes
